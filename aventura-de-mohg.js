@@ -63,7 +63,11 @@ let missaoAtual = "enfrentar o Guardião tecnologico";
 console.log("");
 
 // Começo do capitulo 1
-console.log("🌅 CAPÍTULO 1: A fuga");
+console.log("🎰 CAPITULO 1: o começo")
+console.log("")
+
+// Começo do episodio 1
+console.log("🌅 EPISODIO 1: A fuga");
  if (furtividade > 3) {
     console.log(`${nome} consegue entrar na vila sem que ninguem veja na ${localAtual}`);
 } else {
@@ -80,8 +84,8 @@ if (classe === "mago") {
 
 console.log("");
 
-// Começo do capitulo 2
-console.log(`🛡️ CAPÍTULO 2: O ${nomeBoss1}`);
+// Começo do episodio 2
+console.log(`🛡️ Episodio 2: O ${nomeBoss1}`);
 
 if (furtividade >= 5) {
     console.log(`${nome} consegue invadir algumas casas, e acha um amuleto que pode ser utilizado antes de batalhas para aumentar 20% de dano`)
@@ -129,6 +133,7 @@ if (furtividade >= 7) {
 if (classe === "mago") {
     console.log(`${nome} é abençoado pelo bonzi buddy, um dos Deuses do universo, e consegue utilizar a magia "Meteoro de virus"`)
     vidaBoss1 -= ataqueTotal * 5
+    manaAtual -= manaAtual
 } else if (classe === "guerreiro") {
     console.log(`${nome} é abençoado pelo bonzi buddy, um dos Deuses do universo, e consegue utilizar o ataque "ataque virus-versal"`)
     vidaBoss1 -= ataqueTotal * 5
@@ -141,16 +146,63 @@ if (vidaBoss1 > 100) {
     console.log(`${nome} consegue acertar um ultimo ataque no ${nomeBoss1} e mata ele`)
     vidaBoss1 = 0
     console.log(`O ${nomeBoss1} diz para ele ter noção de suas ações e parar de espalhar maldades tecnologicas`)
-    console.log(`${nome} conseguiu a pedra magica para entrar no mundo de alghoritimia`)
+    console.log(`${nome} conseguiu a pedra da passagem magica para entrar no mundo de alghoritimia`)
     pedraDaPassagem = true
 } else {
     console.log(`${nome} ve que o ${nomeBoss1} esta com pouca vida, ajoelhado e pedindo para que ${nome} não o mate`)
     console.log(`Porem ${nome} foi criado em um clã de assasinos tecnologicos e não poupou a vida do ${nomeBoss1} e o mata com um virus fatal em seu coração`)
     vidaBoss1 = 0
     console.log(`O ${nomeBoss1} diz para ele ter noção de suas ações e parar de espalhar maldades tecnologicas`)
-    console.log(`${nome} conseguiu a pedra magica para entrar no mundo de alghoritimia`)
-    pedraDaPassagem = true
+    console.log(`${nome} conseguiu a pedra da passagem magica para entrar no mundo de alghoritimia`)
 }
 
 console.log("");
 console.log("🏁 FIM DO CAPÍTULO - Aguarde o próximo nível da aventura!");
+console.log("")
+
+// Novos atributos do personagem:
+
+let nivelCap2 = nivel + 5;
+let vidaCap2 = vida + 20;
+let ouroCap2 = ouro + 100;
+let xpCap2 = xp + 30;
+let vidaMaximaCap2 = vidaMaxima + 40;
+let manaAtualCap2 = manaAtual + 30;
+let manaMaximaCap2 = manaMaxima + 30;
+let furtividadeCap2 = furtividade + 3;
+
+// Inventário mágico - primeira coleção arcana
+let inventario = ["Poção de Vida","poção de mana", "Tridente de virus", "Roupa do antigo lord dos anonimus", "Pedra da passagem"];
+let aliados = ["Ziegfried", "Vaciveus", "Claudinei do pneu", "Ichigo", "Guts"];
+let inimigosEncontrados = [nomeBoss1, "Lord dos anonimus", "Dragão de antvirus","guardiões da vila abandonada" ];
+let salasCastelo = ["Biblioteca Arcana", "Armadilha de Cristal", "Torre do Tempo", "Sala do antvirus", "sala do guardião de dados"];
+let tesouroEncontrado = []
+
+
+if (amuletoMagico == true) {
+    inventario.push("Amuleto magico")
+}
+
+// comeco da aventura no castelo de arrays
+console.log(`🏰 === ${nome} ADENTRA O CASTELO DOS ARRAYS ===`);
+console.log(`Após conseguir fugir dos guardas dos anonimus, entrar na vila abandonada e matar o ${nomeBoss1} que lhe deu a pedra da passagem para explorar mais o mundo de algorithimia, ${nome} chega no castelo de arrays`);
+console.log(`Inventário inicial: ${inventario.length} itens mágicos`);
+
+// começo do capitulo 2
+console.log("");
+console.log("👑 CAPÍTULO 2: O castelo de arrays");
+console.log("")
+
+//começo do  episodio 1
+console.log("🗝️ EPISODIO 1: Os Baús Arcanos do Castelo");
+
+// novos itens
+let itensEncontrados = ["Poção de cura", "Amuleto de vida", "Amuleto de mana"];
+let armadilhasAtiradas = []; // Array vazio - será preenchido na aventura
+
+for (let i = 0; i < itensEncontrados.length; i++) {
+    inventario.push(itensEncontrados[i])
+}
+
+console.log(`🧪 primeiro item encontrado: ${itensEncontrados[0]}`);
+console.log("⚗️ Total de poções mágicas: " + itensEncontrados.length);
