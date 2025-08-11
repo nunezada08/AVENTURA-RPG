@@ -173,7 +173,7 @@ let furtividadeCap2 = furtividade + 3;
 
 // Inventário mágico - primeira coleção arcana
 let inventario = ["Poção de Vida","Poção de mana", "Tridente de virus", "Roupa do antigo lord dos anonimus", "Pedra da passagem"];
-let aliados = ["Ziegfried", "Vaciveus", "Claudinei do pneu", "Ichigo", "Guts"];
+let aliados = ["Ziegfried", "Vaciveus", "Guts"];
 let inimigosEncontrados = [nomeBoss1, "Lord dos anonimus", "Dragão de antvirus","guardiões da vila abandonada" ];
 let salasCastelo = ["Biblioteca Arcana", "Armadilha de Cristal", "Torre do Tempo", "Sala do antivirus", "sala do guardião de dados"];
 let tesouroEncontrado = []
@@ -188,12 +188,12 @@ console.log(`🏰 === ${nome} ADENTRA O CASTELO DOS ARRAYS ===`);
 console.log(`Após conseguir fugir dos guardas dos anonimus, entrar na vila abandonada e matar o ${nomeBoss1} que lhe deu a pedra da passagem para explorar mais o mundo de algorithimia, ${nome} chega no castelo de arrays`);
 console.log(`Inventário inicial: ${inventario.length} itens mágicos`);
 
-// Capitulo 2
+// Comeco do Capitulo 2
 console.log("");
 console.log("👑 CAPÍTULO 2: O castelo de arrays");
 console.log("")
 
-// EPISODIO 1
+// Começo do EPISODIO 1
 console.log("🗝️ EPISODIO 1: Os Baús Arcanos do Castelo");
 
 // novos itens
@@ -223,7 +223,7 @@ console.log(`${nome} estava sem mana, por conta da batalha passada, e utilizou u
 let itemRemovido = inventario.pop();
 console.log("📤 Item utlizado: " + itemRemovido);
 
-// === EPISODIO 2: O RITUAL DA EXPLORAÇÃO ===
+// Comeco do EPISODIO 2:
 console.log("");
 console.log("⚔️ EPISODIO 2: Explorando as Masmorras Sistemáticas");
 console.log("");
@@ -246,3 +246,33 @@ console.log(`📊 Exploração completa! XP: ${xpCap2} | Vida: ${vidaCap2}`);
 xp -= xp
 nivel += 1
 console.log(`${nome} aumentou um nivel | Nivel atual: ${nivelCap2}`)
+
+// Começo do EPISODIO 3
+console.log("");
+console.log("🤝 CAPÍTULO 3: O encontro inesperado");
+console.log("")
+
+// Recrutando aliados com for tradicional
+console.log(`🏹 ${nome} explorando o castelo encotra um grupo de pessoas, que para surpresa dele, tinham as mesmas intenções maleficas de acabar com aquele castelo, eram eles:`);
+console.log("")
+
+for (let i = 0; i < aliados.length; i++) {
+    let aliado = aliados[i];
+    console.log("👿 Aliado " + (i + 1) + ": " + aliado + " se junta à missão!");
+    
+    // Cada posição no array determina habilidade especial
+    if (i === 0) { // Primeiro aliado - Líder mágico
+    console.log("🔮 Como líder mágico, " + aliado + " multiplica o poder da equipe!");
+    ataqueTotal += 50.8;
+    } else if (i === 1) { // Segundo aliado - Defensor
+    console.log("🛡️ Como defensor principal, " + aliado + " fortalece a resistência!");
+    vidaMaximaCap2+= 30;
+    } else { // Demais aliados - Especialistas
+    console.log("🏹 Como especialista, " + aliado + " aprimora táticas de combate!");
+    furtividade += 5;
+    }
+}
+
+console.log("")
+
+console.log(`🎖️ Equipe completa! Furtividade: ${furtividade} | Vida máxima: ${vidaMaximaCap2} | Ataque total: ${ataqueTotal}`);
