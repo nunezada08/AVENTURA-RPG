@@ -175,7 +175,7 @@ let furtividadeCap2 = furtividade + 3;
 let inventario = ["Poção de Vida","Poção de mana", "Tridente de virus", "Roupa do antigo lord dos anonimus", "Pedra da passagem"];
 let aliados = ["Ziegfried", "Vaciveus", "Claudinei do pneu", "Ichigo", "Guts"];
 let inimigosEncontrados = [nomeBoss1, "Lord dos anonimus", "Dragão de antvirus","guardiões da vila abandonada" ];
-let salasCastelo = ["Biblioteca Arcana", "Armadilha de Cristal", "Torre do Tempo", "Sala do antvirus", "sala do guardião de dados"];
+let salasCastelo = ["Biblioteca Arcana", "Armadilha de Cristal", "Torre do Tempo", "Sala do antivirus", "sala do guardião de dados"];
 let tesouroEncontrado = []
 
 
@@ -188,12 +188,12 @@ console.log(`🏰 === ${nome} ADENTRA O CASTELO DOS ARRAYS ===`);
 console.log(`Após conseguir fugir dos guardas dos anonimus, entrar na vila abandonada e matar o ${nomeBoss1} que lhe deu a pedra da passagem para explorar mais o mundo de algorithimia, ${nome} chega no castelo de arrays`);
 console.log(`Inventário inicial: ${inventario.length} itens mágicos`);
 
-// começo do capitulo 2
+// Capitulo 2
 console.log("");
 console.log("👑 CAPÍTULO 2: O castelo de arrays");
 console.log("")
 
-//começo do  episodio 1
+// EPISODIO 1
 console.log("🗝️ EPISODIO 1: Os Baús Arcanos do Castelo");
 
 // novos itens
@@ -209,7 +209,7 @@ console.log(`⚗️ total de itens do inventario: ${inventario.length}`);
 
 console.log("")
 
-console.log(`${nome} encontrou um guarda do castelo, porem corrupto, que pode melhorar seus itens.`)
+console.log(`${nome} encontrou um guarda do castelo, porem corrupto, que quer derrubar o lord atual do castelo, ele pode melhorar seus itens.`)
 console.log(`Então ${nome} decide melhorar sua poçao de cura e o seu amuleto de mana`)
 
 inventario[0] = "Poção de Vida +2";
@@ -222,3 +222,27 @@ console.log("")
 console.log(`${nome} estava sem mana, por conta da batalha passada, e utilizou uma poção de mana.`)
 let itemRemovido = inventario.pop();
 console.log("📤 Item utlizado: " + itemRemovido);
+
+// === EPISODIO 2: O RITUAL DA EXPLORAÇÃO ===
+console.log("");
+console.log("⚔️ EPISODIO 2: Explorando as Masmorras Sistemáticas");
+console.log("");
+
+// Explorando cada sala do castelo usando for tradicional
+console.log(`🗺️ Começando exploração das ${salasCastelo.length} salas criptografadas`);
+
+for (let i = 0; i < salasCastelo.length; i++) {
+    console.log(`🚪 Sala ${i + 1}: ${salasCastelo[i]}`);
+    xp += 30
+}
+
+console.log("")
+console.log(`${nome} encontra uma capa estilosa, que lembra a de um antigo heroi chamado Batman`)
+console.log("")
+
+inventario.push("Capa estilosa")
+
+console.log(`📊 Exploração completa! XP: ${xpCap2} | Vida: ${vidaCap2}`);
+xp -= xp
+nivel += 1
+console.log(`${nome} aumentou um nivel | Nivel atual: ${nivelCap2}`)
