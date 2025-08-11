@@ -172,7 +172,7 @@ let manaMaximaCap2 = manaMaxima + 30;
 let furtividadeCap2 = furtividade + 3;
 
 // Inventário mágico - primeira coleção arcana
-let inventario = ["Poção de Vida","poção de mana", "Tridente de virus", "Roupa do antigo lord dos anonimus", "Pedra da passagem"];
+let inventario = ["Poção de Vida","Poção de mana", "Tridente de virus", "Roupa do antigo lord dos anonimus", "Pedra da passagem"];
 let aliados = ["Ziegfried", "Vaciveus", "Claudinei do pneu", "Ichigo", "Guts"];
 let inimigosEncontrados = [nomeBoss1, "Lord dos anonimus", "Dragão de antvirus","guardiões da vila abandonada" ];
 let salasCastelo = ["Biblioteca Arcana", "Armadilha de Cristal", "Torre do Tempo", "Sala do antvirus", "sala do guardião de dados"];
@@ -197,7 +197,7 @@ console.log("")
 console.log("🗝️ EPISODIO 1: Os Baús Arcanos do Castelo");
 
 // novos itens
-let itensEncontrados = ["Poção de cura", "Amuleto de vida", "Amuleto de mana"];
+let itensEncontrados = ["Amuleto de mana", "Amuleto de vida", "Poção de mana"];
 let armadilhasAtiradas = []; // Array vazio - será preenchido na aventura
 
 for (let i = 0; i < itensEncontrados.length; i++) {
@@ -205,4 +205,20 @@ for (let i = 0; i < itensEncontrados.length; i++) {
 }
 
 console.log(`🧪 primeiro item encontrado: ${itensEncontrados[0]}`);
-console.log("⚗️ Total de poções mágicas: " + itensEncontrados.length);
+console.log(`⚗️ total de itens do inventario: ${inventario.length}`);
+
+console.log("")
+
+console.log(`${nome} encontrou um guarda do castelo, porem corrupto, que pode melhorar seus itens.`)
+console.log(`Então ${nome} decide melhorar sua poçao de cura e o seu amuleto de mana`)
+
+inventario[0] = "Poção de Vida +2";
+inventario[6] = "Amuleto de mana +2"
+
+console.log(`itens do inventario atual: ${inventario}`)
+
+console.log("")
+
+console.log(`${nome} estava sem mana, por conta da batalha passada, e utilizou uma poção de mana.`)
+let itemRemovido = inventario.pop();
+console.log("📤 Item utlizado: " + itemRemovido);
