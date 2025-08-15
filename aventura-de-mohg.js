@@ -276,3 +276,48 @@ for (let i = 0; i < aliados.length; i++) {
 console.log("")
 
 console.log(`🎖️ Equipe completa! Furtividade: ${furtividade} | Vida máxima: ${vidaMaximaCap2} | Ataque total: ${ataqueTotal}`);
+
+// === EPISODIO 4: A BATALHA FINAL ===
+console.log("");
+console.log("🐉 CAPÍTULO 4: Confronto com as Criaturas do Castelo");
+
+// Sistema de batalha usando arrays e for tradicional
+let inimigosBatalha = ["integrantes do anonimus", "Senhor das Sombras", "Dragão de codigos"];
+let danoRecebido = [];
+
+console.log(`💀 ${nome} enfrenta ${inimigosBatalha.length} inimigos épicos!`);
+
+// Batalha usando for tradicional para controle preciso
+for (let i = 0; i < inimigosBatalha.length; i++) {
+
+let inimigo = inimigosBatalha[i];
+let dano = Math.floor(Math.random() * 30) + 10; // Dano entre 10 e 39
+
+console.log(`⚔️ Rodada ${i + 1} - Enfrentando: ${inimigo}`);
+console.log(`💥 ${nome} causa ${dano} de dano!`);
+
+danoRecebido.push(dano); // Armazena dano para cálculos posteriores
+
+// Lógica especial para cada rodada baseada no índice
+if (i === 0) {
+console.log("💎 Primeira vitória! resquicios de virus concedem bônus!");
+tesouroEncontrado.push("virus fragmentado");
+} else if (i === 1) {
+console.log(`🌑 Segunda batalha! As sombras drenam energia, mas ${nome} resiste!`);
+vidaCap2 -= 15;
+} else {
+console.log("🔥 Batalha final! O dragão recua! Vitória épica alcançada!");
+xpCap2 += 100;
+tesouroEncontrado.push("Escama Dragônica com codigos");
+}
+}
+
+// Calculando estatísticas da batalha usando for tradicional
+let danoTotal = 0;
+for (let i = 0; i < danoRecebido.length; i++) {
+danoTotal += danoRecebido[i];
+console.log("📊 Rodada " + (i + 1) + " - Dano: " + danoRecebido[i]);
+}
+
+console.log("⚡ Dano total causado: " + danoTotal);
+console.log("🏆 Tesouros coletados: " + tesouroEncontrado.length + " itens lendarios novos!");
